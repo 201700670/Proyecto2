@@ -13,6 +13,9 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
+    String usuarios12;
+    String pasword;
+
     /**
      * Creates new form Login
      */
@@ -35,9 +38,9 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         usuario = new javax.swing.JTextField();
         contrasena = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Login = new javax.swing.JButton();
+        Registrarse = new javax.swing.JButton();
+        Cancelar = new javax.swing.JButton();
         imagenlog = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -62,27 +65,27 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jButton1.setText("Login");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Login.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        Login.setText("Login");
+        Login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                LoginActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jButton2.setText("Registrarse");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Registrarse.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        Registrarse.setText("Registrarse");
+        Registrarse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                RegistrarseActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jButton3.setText("Cancelar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Cancelar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        Cancelar.setText("Cancelar");
+        Cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                CancelarActionPerformed(evt);
             }
         });
 
@@ -109,11 +112,11 @@ public class Login extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(Login)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(Registrarse)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3))
+                        .addComponent(Cancelar))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2)
@@ -142,9 +145,9 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(imagenlog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(Login)
+                    .addComponent(Registrarse)
+                    .addComponent(Cancelar))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
@@ -155,54 +158,41 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_contrasenaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void RegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarseActionPerformed
         // TODO add your handling code here:
-        RegistroU obj= new RegistroU();
+        RegistroU obj = new RegistroU();
         obj.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        String obusu=usuario.getText();
-        String contra= contrasena.getText();
         
-        DatoUsuario.creausuario[0]=new DatoUsuario("admin", "admin","admin", "Administrador", "201700670");
-               if(obusu.equals(DatoUsuario.creausuario[0].usuario)&& contra.equals(DatoUsuario.creausuario[0].contrasena)){
-                 //FALTA FRAME ADMINISTRADOR
-               }else{
-               
-               
-                for(int i=1;i<DatoUsuario.contausuario;i++){
-                    
-                    while((obusu.equals(DatoUsuario.creausuario[i].usuario)) && (contra.equals(DatoUsuario.creausuario[i].contrasena))){
-                        JOptionPane.showMessageDialog(Login.this,"BIENVENIDO","INFORMACION",JOptionPane.INFORMATION_MESSAGE);
-                        ProyectoPrueba.usuarioactual=DatoUsuario.creausuario[i].usuario;
-                        System.out.println(ProyectoPrueba.usuarioactual);
-                        //////////ENTRAR COMO USUARIO AL ALBUM
-                        return;
-                    }
-                }
-               for(int i=1;i<DatoUsuario.contausuario;i++){
-                    while((!obusu.equals(DatoUsuario.creausuario[i].usuario)) || (!contra.equals(DatoUsuario.creausuario[i].contrasena))){
-                        JOptionPane.showMessageDialog(Login.this,"EL USUARIO Y CONTRASEÑA NO COINCIDEN\n"
-                                + "FAVOR REVISE SUS DATOS","ERROR",JOptionPane.WARNING_MESSAGE);
-                        return;
-                    }
-                }
-               for(int i=0;i<DatoUsuario.contausuario;i++){
-                    while((!obusu.equals(DatoUsuario.creausuario[i].usuario)) && (!contra.equals(DatoUsuario.creausuario[i].contrasena))){
-                        JOptionPane.showMessageDialog(Login.this,"EL USUARIO NO EXISTE, PONERSE EN CONTACTO\n"
-                                + "CON EL ADMINISTRADOR PARA SOLICITAR UN REGISTRO","ERROR",JOptionPane.WARNING_MESSAGE);
-                        return;
-                    }
-                }
-            }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_RegistrarseActionPerformed
+
+    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
+        // TODO add your handling code here:
+        usuario.setText(null);
+        contrasena.setText(null);
+
+    }//GEN-LAST:event_CancelarActionPerformed
+
+    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
+        // TODO add your handling code here:
+        usuarios12 = usuario.getText();
+        pasword = contrasena.getText();
+        boolean probando;
+        ///////////haciendo busqueda
+        if (usuarios12.equals("Andrea") && pasword.equals("201700670")) {
+            FrameAdministrador obj = new FrameAdministrador();
+            obj.setVisible(true);
+            dispose();
+        }
+        probando=RegistroU.listitausuario.buscarlogin(usuarios12, pasword);
+        if(probando){
+            //////////////Ingresa a Usuario
+            
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "EL USUARIO NO EXISTE O EL USUARIO Y/O CONTRASEÑA SON INCORRECTAS, PONERSE EN CONTACTO\n"
+                            + "CON EL ADMINISTRADOR PARA SOLICITAR UN REGISTRO", "ERROR", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_LoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,11 +230,11 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cancelar;
+    private javax.swing.JButton Login;
+    private javax.swing.JButton Registrarse;
     private javax.swing.JPasswordField contrasena;
     private javax.swing.JPanel imagenlog;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

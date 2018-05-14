@@ -13,6 +13,13 @@ import javax.swing.JOptionPane;
  */
 public class RegistroU extends javax.swing.JFrame {
 
+     String id;
+     String nom;
+     String electronico;
+     String nomusuario;
+     String contra;
+    public static ListaUsuarios listitausuario = new ListaUsuarios();
+
     /**
      * Creates new form RegistroU
      */
@@ -41,7 +48,6 @@ public class RegistroU extends javax.swing.JFrame {
         contrasena = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -104,16 +110,8 @@ public class RegistroU extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jButton2.setText("Regresar Login");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jButton3.setText("Cancelar");
+        jButton3.setText("Regresar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -134,8 +132,9 @@ public class RegistroU extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(53, 53, 53)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(29, 29, 29)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
@@ -149,10 +148,7 @@ public class RegistroU extends javax.swing.JFrame {
                                     .addComponent(correo)
                                     .addComponent(nombre)
                                     .addComponent(usuario)
-                                    .addComponent(contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))))))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -182,11 +178,9 @@ public class RegistroU extends javax.swing.JFrame {
                     .addComponent(contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap())
+                    .addComponent(jButton1)
+                    .addComponent(jButton3))
+                .addGap(58, 58, 58))
         );
 
         pack();
@@ -202,24 +196,15 @@ public class RegistroU extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         String id=cui.getText();
-         String nom=nombre.getText();
-         String electronico=correo.getText();
-         String nomusuario=usuario.getText();
-         String contra=contrasena.getText();
-         if("".equals(id)||"".equals(nom)||"".equals(electronico)||"".equals(nomusuario)||"".equals(contra)){
-                                    JOptionPane.showMessageDialog(null,"DEBE LLENAR TODOS LOS CAMPOS","ERROR",JOptionPane.WARNING_MESSAGE);
-         }
-         DatoUsuario.creausuario[DatoUsuario.contausuario]=new DatoUsuario(id, nom, electronico, nomusuario, contra);
-         for(int persona1=1;persona1<DatoUsuario.contausuario;persona1++){
-                                   while((DatoUsuario.creausuario[DatoUsuario.contausuario].usuario).equals((DatoUsuario.creausuario[persona1].usuario))){
-                                       JOptionPane.showMessageDialog(null,"YA EXISTE UN USUARIO CON ESE NOMBRE, CAMBIARLO","ERROR",JOptionPane.WARNING_MESSAGE);
-                                       return;
-                                   }
-                               }
-        DatoUsuario.contausuario++;
-        System.out.println(DatoUsuario.contausuario);
-        JOptionPane.showMessageDialog(null,"USUARIO CREADO EXITOSAMENTE","INFORMACION",JOptionPane.INFORMATION_MESSAGE);
+        id = cui.getText();
+        nom = nombre.getText();
+        electronico = correo.getText();
+        nomusuario = usuario.getText();
+        contra = contrasena.getText();
+        
+        listitausuario.insertarinicio(id, nom, electronico, nomusuario, contra);
+        listitausuario.mostrar();
+        
         cui.setText(null);
         nombre.setText(null);
         correo.setText(null);
@@ -227,15 +212,11 @@ public class RegistroU extends javax.swing.JFrame {
         contrasena.setText(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        Login obj= new Login();
-        obj.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:}
+        FrameAdministrador obj = new FrameAdministrador();
+        obj.setVisible(true);
+        dispose();
         cui.setText(null);
         nombre.setText(null);
         correo.setText(null);
@@ -247,6 +228,7 @@ public class RegistroU extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -283,7 +265,6 @@ public class RegistroU extends javax.swing.JFrame {
     private javax.swing.JTextField correo;
     private javax.swing.JTextField cui;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

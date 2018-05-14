@@ -10,15 +10,18 @@ package proyectoprueba;
  * @author Andrea Palomo
  */
 public class NodoUsuario  {
-    String nomusuario;
+    String obcui,obnom, obcorreo, obusu, obcontra;
     NodoUsuario siguiente, anterior;
-    public NodoUsuario(String el) {
-        this(el,null,null);
+    public NodoUsuario(String cui,String nombre,String correo, String usuario, String contrasena) {
+        this(cui,nombre,correo, usuario, contrasena,null,null);
     }
-    public NodoUsuario(String el, NodoUsuario s, NodoUsuario a){
+    public NodoUsuario(String cui,String nombre,String correo, String usuario, String contrasena, NodoUsuario s, NodoUsuario a){
         ////NO SE SI PONERLE EL IF DE LA COMPARACIÓN DE LOS USUARIOS CON EL USUARIO ACTUAL
-        nomusuario=ProyectoPrueba.usuarioactual;
-        nomusuario=el;
+        obcui=cui;
+        obnom=nombre;
+        obcorreo=correo;
+        obusu=usuario;
+        obcontra=contrasena;
         siguiente=s;
         anterior=a;
     }

@@ -44,6 +44,7 @@ public class EliminaU extends javax.swing.JFrame {
         cui = new javax.swing.JTextField();
         correo = new javax.swing.JTextField();
         nombre = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         jLabel1.setText("CREACIÓN USUARIOS");
 
@@ -54,6 +55,7 @@ public class EliminaU extends javax.swing.JFrame {
 
         contrasena.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         contrasena.setToolTipText("");
+        contrasena.setEnabled(false);
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 1, 18)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -106,6 +108,7 @@ public class EliminaU extends javax.swing.JFrame {
 
         cui.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         cui.setToolTipText("");
+        cui.setEnabled(false);
         cui.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cuiActionPerformed(evt);
@@ -114,14 +117,18 @@ public class EliminaU extends javax.swing.JFrame {
 
         correo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         correo.setToolTipText("");
+        correo.setEnabled(false);
 
         nombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         nombre.setToolTipText("");
+        nombre.setEnabled(false);
         nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreActionPerformed(evt);
             }
         });
+
+        jLabel8.setText("Después de realiza la búsqueda realice la opción eliminar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -154,7 +161,10 @@ public class EliminaU extends javax.swing.JFrame {
                         .addComponent(buscar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(153, 153, 153)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(jLabel8)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -183,11 +193,13 @@ public class EliminaU extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Regresar)
                     .addComponent(Eliminar))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
@@ -195,24 +207,16 @@ public class EliminaU extends javax.swing.JFrame {
 
     private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
         // TODO add your handling code here:
-        String id=cui.getText();
-        String nom=nombre.getText();
-        String electronico=correo.getText();
-        String nomusuario=usuario.getText();
-        String contra=contrasena.getText();
-        if("".equals(id)||"".equals(nom)||"".equals(electronico)||"".equals(nomusuario)||"".equals(contra)){
-            JOptionPane.showMessageDialog(null,"DEBE LLENAR TODOS LOS CAMPOS","ERROR",JOptionPane.WARNING_MESSAGE);
-        }
-        DatoUsuario.creausuario[DatoUsuario.contausuario]=new DatoUsuario(id, nom, electronico, nomusuario, contra);
-        for(int persona1=1;persona1<DatoUsuario.contausuario;persona1++){
-            while((DatoUsuario.creausuario[DatoUsuario.contausuario].usuario).equals((DatoUsuario.creausuario[persona1].usuario))){
-                JOptionPane.showMessageDialog(null,"YA EXISTE UN USUARIO CON ESE NOMBRE, CAMBIARLO","ERROR",JOptionPane.WARNING_MESSAGE);
-                return;
-            }
-        }
-        DatoUsuario.contausuario++;
-        System.out.println(DatoUsuario.contausuario);
-        JOptionPane.showMessageDialog(null,"USUARIO CREADO EXITOSAMENTE","INFORMACION",JOptionPane.INFORMATION_MESSAGE);
+
+        String obcui, obnomb, obelectronico, obnomusuario, obcontra;
+        obcui = cui.getText();
+        obnomb = nombre.getText();
+        obelectronico = correo.getText();
+        obnomusuario = usuario.getText();
+        obcontra = contrasena.getText();
+        RegistroU.listitausuario.eliminar(obcui, obnomb, obelectronico, obnomusuario, obcontra);
+        RegistroU.listitausuario.mostrar();
+//        
         cui.setText(null);
         nombre.setText(null);
         correo.setText(null);
@@ -222,18 +226,26 @@ public class EliminaU extends javax.swing.JFrame {
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
         // TODO add your handling code here:
-        Login obj= new Login();
+        FrameAdministrador obj = new FrameAdministrador();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_RegresarActionPerformed
 
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
         // TODO add your handling code here:}
-        cui.setText(null);
-        nombre.setText(null);
-        correo.setText(null);
-        usuario.setText(null);
-        contrasena.setText(null);
+        String obcui, obnomb, obelectronico, obnomusuario, obcontra;
+        boolean probar = true;
+        obcui = cui.getText();
+        obnomb = nombre.getText();
+        obelectronico = correo.getText();
+        obnomusuario = usuario.getText();
+        obcontra = contrasena.getText();
+        RegistroU.listitausuario.buscareditarbuscar(obcui, obnomb, obelectronico, obnomusuario, obcontra);
+        cui.setText(ListaUsuarios.cuis);
+        nombre.setText(ListaUsuarios.nombres);
+        correo.setText(ListaUsuarios.correos);
+        usuario.setText(ListaUsuarios.usuariosos);
+        contrasena.setText(ListaUsuarios.contrasenas);
     }//GEN-LAST:event_buscarActionPerformed
 
     private void cuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuiActionPerformed
@@ -294,6 +306,7 @@ public class EliminaU extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables

@@ -12,7 +12,8 @@ import javax.swing.JOptionPane;
  * @author Andrea Palomo
  */
 public class EditaU extends javax.swing.JFrame {
-
+    private static int contador=0;
+    
     /**
      * Creates new form EditaU
      */
@@ -43,6 +44,7 @@ public class EditaU extends javax.swing.JFrame {
         cui = new javax.swing.JTextField();
         correo = new javax.swing.JTextField();
         nombre = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,7 +64,7 @@ public class EditaU extends javax.swing.JFrame {
         jLabel1.setToolTipText("");
 
         Editar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        Editar.setText("Registrarse");
+        Editar.setText("Editar");
         Editar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EditarActionPerformed(evt);
@@ -74,7 +76,7 @@ public class EditaU extends javax.swing.JFrame {
         jLabel2.setToolTipText("");
 
         Regresar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        Regresar.setText("Regresar Login");
+        Regresar.setText("Cancelar");
         Regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegresarActionPerformed(evt);
@@ -120,6 +122,8 @@ public class EditaU extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setText("Después de realiza la búsqueda realice la edición de campos y presione editar.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -128,30 +132,32 @@ public class EditaU extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(53, 53, 53)
-                                .addComponent(Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4))
-                                .addGap(32, 32, 32)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cui)
-                                    .addComponent(correo)
-                                    .addComponent(nombre)
-                                    .addComponent(usuario)
-                                    .addComponent(contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4))
+                        .addGap(32, 32, 32)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cui)
+                            .addComponent(correo)
+                            .addComponent(nombre)
+                            .addComponent(usuario)
+                            .addComponent(contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(buscar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(153, 153, 153)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(jLabel8)))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -180,11 +186,13 @@ public class EditaU extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Regresar)
                     .addComponent(Editar))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
@@ -192,24 +200,14 @@ public class EditaU extends javax.swing.JFrame {
 
     private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed
         // TODO add your handling code here:
-        String id=cui.getText();
-        String nom=nombre.getText();
-        String electronico=correo.getText();
-        String nomusuario=usuario.getText();
-        String contra=contrasena.getText();
-        if("".equals(id)||"".equals(nom)||"".equals(electronico)||"".equals(nomusuario)||"".equals(contra)){
-            JOptionPane.showMessageDialog(null,"DEBE LLENAR TODOS LOS CAMPOS","ERROR",JOptionPane.WARNING_MESSAGE);
-        }
-        DatoUsuario.creausuario[DatoUsuario.contausuario]=new DatoUsuario(id, nom, electronico, nomusuario, contra);
-        for(int persona1=1;persona1<DatoUsuario.contausuario;persona1++){
-            while((DatoUsuario.creausuario[DatoUsuario.contausuario].usuario).equals((DatoUsuario.creausuario[persona1].usuario))){
-                JOptionPane.showMessageDialog(null,"YA EXISTE UN USUARIO CON ESE NOMBRE, CAMBIARLO","ERROR",JOptionPane.WARNING_MESSAGE);
-                return;
-            }
-        }
-        DatoUsuario.contausuario++;
-        System.out.println(DatoUsuario.contausuario);
-        JOptionPane.showMessageDialog(null,"USUARIO CREADO EXITOSAMENTE","INFORMACION",JOptionPane.INFORMATION_MESSAGE);
+        String obcui,obnomb, obelectronico, obnomusuario, obcontra;
+        obcui = cui.getText();
+        obnomb = nombre.getText();
+        obelectronico = correo.getText();
+        obnomusuario = usuario.getText();
+        obcontra = contrasena.getText();
+        RegistroU.listitausuario.buscareditar(obcui, obnomb, obelectronico, obnomusuario, obcontra);
+        
         cui.setText(null);
         nombre.setText(null);
         correo.setText(null);
@@ -219,20 +217,29 @@ public class EditaU extends javax.swing.JFrame {
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
         // TODO add your handling code here:
-        Login obj= new Login();
+        FrameAdministrador obj = new FrameAdministrador();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_RegresarActionPerformed
 
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
         // TODO add your handling code here:}
-        cui.setText(null);
-        nombre.setText(null);
-        correo.setText(null);
-        usuario.setText(null);
-        contrasena.setText(null);
+        String obcui,obnomb, obelectronico, obnomusuario, obcontra;
+        boolean probar = true;
+        obcui = cui.getText();
+        obnomb = nombre.getText();
+        obelectronico = correo.getText();
+        obnomusuario = usuario.getText();
+        obcontra = contrasena.getText();
+        RegistroU.listitausuario.buscareditarbuscar(obcui, obnomb, obelectronico, obnomusuario, obcontra);
+        cui.setText(ListaUsuarios.cuis);
+        nombre.setText(ListaUsuarios.nombres);
+        correo.setText(ListaUsuarios.correos);
+        usuario.setText(ListaUsuarios.usuariosos);
+        contrasena.setText(ListaUsuarios.contrasenas);
     }//GEN-LAST:event_buscarActionPerformed
 
+    
     private void cuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cuiActionPerformed
@@ -289,6 +296,7 @@ public class EditaU extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables

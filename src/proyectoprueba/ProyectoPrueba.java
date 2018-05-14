@@ -10,12 +10,14 @@ package proyectoprueba;
  * @author Andrea Palomo
  */
 public class ProyectoPrueba {
-    public static String usuarioactual;
+
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        Login obj= new Login();
+        RegistroU.listitausuario.insertarinicio("3609787380108", "vgdep@hotmail.com", "vgdep", "Andrea", "201700670");
+//        Login obj= new Login();
+//        obj.setVisible(true);
+        FrameAdministrador obj = new FrameAdministrador();
         obj.setVisible(true);
     }
-    
+
 }
