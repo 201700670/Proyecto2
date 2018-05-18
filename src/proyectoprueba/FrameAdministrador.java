@@ -87,9 +87,19 @@ public class FrameAdministrador extends javax.swing.JFrame {
 
         crearj.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         crearj.setText("Crear");
+        crearj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearjActionPerformed(evt);
+            }
+        });
 
         editarj.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         editarj.setText("Editar");
+        editarj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarjActionPerformed(evt);
+            }
+        });
 
         eliminarj.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         eliminarj.setText("Eliminar");
@@ -107,12 +117,27 @@ public class FrameAdministrador extends javax.swing.JFrame {
 
         crearequi.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         crearequi.setText("Crear");
+        crearequi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearequiActionPerformed(evt);
+            }
+        });
 
         editarequi.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         editarequi.setText("Editar");
+        editarequi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarequiActionPerformed(evt);
+            }
+        });
 
         eliminarequi.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         eliminarequi.setText("Eliminar");
+        eliminarequi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarequiActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         jButton1.setText("jButton1");
@@ -253,6 +278,10 @@ public class FrameAdministrador extends javax.swing.JFrame {
 
     private void eliminarjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarjActionPerformed
         // TODO add your handling code here:
+        EliminaJugadores obj= new EliminaJugadores();
+        obj.setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_eliminarjActionPerformed
 
     private void archestampasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archestampasActionPerformed
@@ -286,6 +315,41 @@ public class FrameAdministrador extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_eliminarActionPerformed
+
+    private void crearjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearjActionPerformed
+        // TODO add your handling code here:
+        Registrosjugadores obj= new Registrosjugadores();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_crearjActionPerformed
+
+    private void editarjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarjActionPerformed
+        // TODO add your handling code here:
+        EditaJugadores obj= new EditaJugadores();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_editarjActionPerformed
+
+    private void crearequiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearequiActionPerformed
+        // TODO add your handling code here:
+        RegistroEquipos obj = new RegistroEquipos();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_crearequiActionPerformed
+
+    private void editarequiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarequiActionPerformed
+        // TODO add your handling code here:
+        EditaEquipos obj = new EditaEquipos();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_editarequiActionPerformed
+
+    private void eliminarequiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarequiActionPerformed
+        // TODO add your handling code here:
+        EliminaEquipos obj = new EliminaEquipos();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_eliminarequiActionPerformed
 
     /**
      * @param args the command line arguments

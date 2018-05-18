@@ -10,15 +10,19 @@ package proyectoprueba;
  * @author Andrea Palomo
  */
 public class NodoJugadores {
-    String codigo,nombrequipo, mundiales;
+    String nombrejugador,camisola, posicion, titularoBanca,idequipos;
     NodoJugadores siguiente, anterior;
-    public NodoJugadores(String codigo,String nombrequipo,String mundiales) {
-        this(codigo,nombrequipo, mundiales ,null,null);
+    public static String idEquipos;
+    public NodoJugadores(String nombrejugador,String camisola,String posicion, String titularobanca, String idEquipo) {
+        this(nombrejugador,camisola, posicion, titularobanca, idEquipo, null, null);
     }
-    public NodoJugadores(String codigos,String nombrequipos,String mundialesg, NodoJugadores s, NodoJugadores a){
-        codigo=codigos;
-        nombrequipo=nombrequipos;
-        mundiales=mundialesg;
+    public NodoJugadores(String nombrejugador,String camisola,String posicion, String titularobanca, String idEquipo, NodoJugadores s, NodoJugadores a){
+        this.nombrejugador=nombrejugador;
+        this.camisola=camisola;
+        this.posicion=posicion;
+        this.titularoBanca=titularobanca;
+        idequipos=idEquipo;
+        idEquipos=idequipos;
         siguiente=s;
         anterior=a;
     }

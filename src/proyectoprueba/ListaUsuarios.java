@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class ListaUsuarios {
     public static String cuis, nombres, correos, usuariosos,contrasenas;
-    public static String cuisa, nombresa, correosa, usuariososa,contrasenasa;
+   
     private NodoUsuario inicio, fin;
     public ListaUsuarios(){
         inicio=null;
@@ -81,7 +81,7 @@ public class ListaUsuarios {
         String dato="";
         while(aux!=null){
             if(aux.obusu.equals(usuario) ){
-                JOptionPane.showMessageDialog(null, "EL USARIO EXISTE", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "EL USUARIO EXISTE", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
                 cui=aux.obcui;
                 nombre=aux.obnom;
                 correo=aux.obcorreo;
@@ -107,12 +107,18 @@ public class ListaUsuarios {
         while(aux!=null){
             if(aux.obusu.equals(usuariosos)){
                 if(aux==inicio){
+                    try {
                     inicio=inicio.siguiente;
                     inicio.anterior=null;
+                    } catch (Exception e) {
+                    }
                 }
                 else{
+                     try {
                     atras.siguiente=aux.siguiente;
                     aux.siguiente.anterior=aux.anterior;
+                    } catch (Exception e) {
+                    }
                 }
                 
 //                dato="["+aux.obcui+","+aux.obnom+","+aux.obcorreo+","+aux.obusu+","+aux.obcontra+"]";
