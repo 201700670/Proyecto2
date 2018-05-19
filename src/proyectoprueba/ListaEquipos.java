@@ -5,9 +5,13 @@
  */
 package proyectoprueba;
 
+import java.awt.BorderLayout;
 import java.io.IOException;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -83,21 +87,34 @@ public class ListaEquipos {
         return datos;
     }
     
-    public String buscarsiexistenlistas(String codigo, String nombrequipo, String mundiales) {
+    public boolean buscarsiexistenlistas(String codigo) {
         NodoEquipos aux = inicio;
         String dato = "";
+        boolean probando=false;
         while (aux != null) {
-            if (aux.codigo.equals(NodoJugadores.idEquipos)) {
-                aux.codigo = codigo;
-                aux.nombrequipo = nombrequipo;
-                aux.mundiales = mundiales;
-                dato = "[" + aux.codigo + "," + aux.nombrequipo + "," + aux.mundiales + "]";
+            if (aux.codigo.equals(codigo)&& aux.listitajugadoresinterna.busquedaequiposjugadores(codigo)) {
+                dato = "[" + aux.codigo + "," + aux.nombrequipo + "," + aux.mundiales +","+ListaJugadores.mostrarenequipos+ "]";
                 System.out.println(dato);
-                mostrar();
+                probando=true;
             }
             aux = aux.siguiente;
         }
-        return dato;
+        return probando;
+    }
+    
+    public boolean creanodosiexiste(String codigo) {
+        NodoEquipos aux = inicio;
+        String dato = "";
+        boolean probando=false;
+        while (aux != null) {
+            if (aux.codigo.equals(codigo)) {
+                dato = "[" + aux.codigo + "," + aux.nombrequipo + "," + aux.mundiales +","+ListaJugadores.mostrarenequipos+ "]";
+                System.out.println(dato);
+                probando=true;
+            }
+            aux = aux.siguiente;
+        }
+        return probando;
     }
     
     public String buscareditar(String codigo, String nombrequipo, String mundiales) {
@@ -166,10 +183,23 @@ public class ListaEquipos {
             atras = aux;
             aux = aux.siguiente;
         }
-        while(aux==null){
-            JOptionPane.showMessageDialog(null, "NO HAY EQUIPOS EXISTENTES", "ERROR", JOptionPane.WARNING_MESSAGE);
-        }
+        
         return dato;
     }
-
+    public String filastabla(JTable tablaequipos){
+        String [] encabezado={ "Código","Nombre de Equipo", "Mundiales ganados"};
+        DefaultTableModel creaciontabla=new DefaultTableModel(null,encabezado);
+            String datos = "";
+            NodoEquipos aux = inicio;
+            while (aux != null) {
+                
+                String[]equipos={aux.codigo,aux.nombrequipo,aux.mundiales};
+                creaciontabla.addRow(equipos);
+                
+//                System.out.println(Globalidequipos);
+                aux = aux.siguiente;
+            }
+            tablaequipos.setModel(creaciontabla);
+        return datos;
+    }
 }

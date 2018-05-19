@@ -5,6 +5,11 @@
  */
 package proyectoprueba;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Andrea Palomo
@@ -41,9 +46,9 @@ public class FrameAdministrador extends javax.swing.JFrame {
         crearequi = new javax.swing.JButton();
         editarequi = new javax.swing.JButton();
         eliminarequi = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Crearestampas = new javax.swing.JButton();
+        EditarEstampas = new javax.swing.JButton();
+        EliminarEstampas = new javax.swing.JButton();
         archequ = new javax.swing.JButton();
         archjugadores = new javax.swing.JButton();
         archestampas = new javax.swing.JButton();
@@ -139,20 +144,40 @@ public class FrameAdministrador extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        jButton1.setText("jButton1");
+        Crearestampas.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        Crearestampas.setText("Crear");
+        Crearestampas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearestampasActionPerformed(evt);
+            }
+        });
 
-        jButton2.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        jButton2.setText("jButton2");
+        EditarEstampas.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        EditarEstampas.setText("Editar");
+        EditarEstampas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarEstampasActionPerformed(evt);
+            }
+        });
 
-        jButton3.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        jButton3.setText("jButton3");
+        EliminarEstampas.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        EliminarEstampas.setText("Eliminar");
 
         archequ.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         archequ.setText("Archivo de equipos");
+        archequ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                archequActionPerformed(evt);
+            }
+        });
 
         archjugadores.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         archjugadores.setText("Archivo de jugadores");
+        archjugadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                archjugadoresActionPerformed(evt);
+            }
+        });
 
         archestampas.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         archestampas.setText("Archivo de estampas");
@@ -197,11 +222,11 @@ public class FrameAdministrador extends javax.swing.JFrame {
                                 .addGap(72, 72, 72)
                                 .addComponent(archestampas))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(Crearestampas)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2)
+                                .addComponent(EditarEstampas)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3))
+                                .addComponent(EliminarEstampas))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(crearequi)
                                 .addGap(18, 18, 18)
@@ -259,9 +284,9 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton1))
+                    .addComponent(EditarEstampas)
+                    .addComponent(EliminarEstampas)
+                    .addComponent(Crearestampas))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(10, 10, 10)
@@ -278,10 +303,10 @@ public class FrameAdministrador extends javax.swing.JFrame {
 
     private void eliminarjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarjActionPerformed
         // TODO add your handling code here:
-        EliminaJugadores obj= new EliminaJugadores();
+        EliminaJugadores obj = new EliminaJugadores();
         obj.setVisible(true);
         dispose();
-        
+
     }//GEN-LAST:event_eliminarjActionPerformed
 
     private void archestampasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archestampasActionPerformed
@@ -290,42 +315,42 @@ public class FrameAdministrador extends javax.swing.JFrame {
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
-        Login obj= new Login();
+        Login obj = new Login();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_SalirActionPerformed
 
     private void crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearActionPerformed
         // TODO add your handling code here:
-        RegistroU obj= new RegistroU();
+        RegistroU obj = new RegistroU();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_crearActionPerformed
 
     private void editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarActionPerformed
         // TODO add your handling code here:
-        EditaU obj= new EditaU();
+        EditaU obj = new EditaU();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_editarActionPerformed
 
     private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
         // TODO add your handling code here:
-        EliminaU obj= new EliminaU();
+        EliminaU obj = new EliminaU();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_eliminarActionPerformed
 
     private void crearjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearjActionPerformed
         // TODO add your handling code here:
-        Registrosjugadores obj= new Registrosjugadores();
+        Registrosjugadores obj = new Registrosjugadores();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_crearjActionPerformed
 
     private void editarjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarjActionPerformed
         // TODO add your handling code here:
-        EditaJugadores obj= new EditaJugadores();
+        EditaJugadores obj = new EditaJugadores();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_editarjActionPerformed
@@ -350,6 +375,44 @@ public class FrameAdministrador extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_eliminarequiActionPerformed
+
+    private void archequActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archequActionPerformed
+        // TODO add your handling code here:\
+        ArchivoEquipos archivoe = new ArchivoEquipos();
+        try {
+            archivoe.mostrar();
+        } catch (IOException ex) {
+            Logger.getLogger(FrameAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        RegistroEquipos.listitaequipos.mostrar();
+        JOptionPane.showMessageDialog(null, "SE HA AGREGADO UNA LISTA DE EQUIPOS", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_archequActionPerformed
+
+    private void archjugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archjugadoresActionPerformed
+        // TODO add your handling code here:
+        ArchivoJugadores archivoj = new ArchivoJugadores();
+        try {
+            archivoj.mostrar();
+        } catch (IOException ex) {
+            Logger.getLogger(FrameAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Registrosjugadores.listitajugadores.mostrar();
+        JOptionPane.showMessageDialog(null, "SE HA AGREGADO UNA LISTA DE JUGADORES", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_archjugadoresActionPerformed
+
+    private void CrearestampasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearestampasActionPerformed
+        // TODO add your handling code here:
+        RegistroEstampas obj=new RegistroEstampas();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_CrearestampasActionPerformed
+
+    private void EditarEstampasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarEstampasActionPerformed
+        // TODO add your handling code here:
+        EditaEstampas obj=new EditaEstampas();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_EditarEstampasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -387,6 +450,9 @@ public class FrameAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Crearestampas;
+    private javax.swing.JButton EditarEstampas;
+    private javax.swing.JButton EliminarEstampas;
     private javax.swing.JButton Salir;
     private javax.swing.JButton archequ;
     private javax.swing.JButton archestampas;
@@ -400,9 +466,6 @@ public class FrameAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton eliminar;
     private javax.swing.JButton eliminarequi;
     private javax.swing.JButton eliminarj;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

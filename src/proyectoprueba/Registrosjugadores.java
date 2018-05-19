@@ -228,6 +228,7 @@ public class Registrosjugadores extends javax.swing.JFrame {
         
         listitajugadores.insertarinicio(nombrejs, numcamisola, posicionc, titularob, idequipos);
         listitajugadores.mostrar();
+        RegistroEquipos.listitaequipos.buscarsiexistenlistas(idequipos);
         
         nombrej.setText(null);
         nocamisola.setText(null);

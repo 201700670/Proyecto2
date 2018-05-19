@@ -162,7 +162,7 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         RegistroU obj = new RegistroU();
         obj.setVisible(true);
-        
+
     }//GEN-LAST:event_RegistrarseActionPerformed
 
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
@@ -183,14 +183,15 @@ public class Login extends javax.swing.JFrame {
             obj.setVisible(true);
             dispose();
         }
-        probando=RegistroU.listitausuario.buscarlogin(usuarios12, pasword);
-        if(probando){
+        probando = RegistroU.listitausuario.buscarlogin(usuarios12, pasword);
+        if (probando) {
             //////////////Ingresa a Usuario
-            
-        }
-        else{
+            Usuario obj = new Usuario();
+            obj.setVisible(true);
+            dispose();
+        } else {
             JOptionPane.showMessageDialog(null, "EL USUARIO NO EXISTE O EL USUARIO Y/O CONTRASEÑA SON INCORRECTAS, PONERSE EN CONTACTO\n"
-                            + "CON EL ADMINISTRADOR PARA SOLICITAR UN REGISTRO", "ERROR", JOptionPane.WARNING_MESSAGE);
+                    + "CON EL ADMINISTRADOR PARA SOLICITAR UN REGISTRO", "ERROR", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_LoginActionPerformed
 
