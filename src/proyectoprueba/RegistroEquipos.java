@@ -19,6 +19,7 @@ public class RegistroEquipos extends javax.swing.JFrame {
      */
     public RegistroEquipos() {
         initComponents();
+        setTitle("REGISTRO DE EQUIPOS");
     }
 
     /**
@@ -39,11 +40,14 @@ public class RegistroEquipos extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         codigo = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mundiales.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         mundiales.setToolTipText("");
+        getContentPane().add(mundiales, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 175, 190, -1));
 
         nombreequipo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         nombreequipo.setToolTipText("");
@@ -52,11 +56,14 @@ public class RegistroEquipos extends javax.swing.JFrame {
                 nombreequipoActionPerformed(evt);
             }
         });
+        getContentPane().add(nombreequipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 134, 190, -1));
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("REGISTRO DE EQUIPOS");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 25, 226, -1));
 
         Registrarse.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Registrarse.setText("Registrarse");
@@ -65,6 +72,7 @@ public class RegistroEquipos extends javax.swing.JFrame {
                 RegistrarseActionPerformed(evt);
             }
         });
+        getContentPane().add(Registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 234, 131, -1));
 
         Regresar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Regresar.setText("Regresar");
@@ -73,18 +81,25 @@ public class RegistroEquipos extends javax.swing.JFrame {
                 RegresarActionPerformed(evt);
             }
         });
+        getContentPane().add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 234, 155, -1));
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("código");
         jLabel1.setToolTipText("");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 94, 70, -1));
 
         jLabel2.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre de Equipo:");
         jLabel2.setToolTipText("");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 137, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Mundiales ganados:");
         jLabel3.setToolTipText("");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 178, -1, -1));
 
         codigo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         codigo.setToolTipText("");
@@ -93,58 +108,11 @@ public class RegistroEquipos extends javax.swing.JFrame {
                 codigoActionPerformed(evt);
             }
         });
+        getContentPane().add(codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 93, 190, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(codigo, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(mundiales)
-                            .addComponent(nombreequipo))))
-                .addContainerGap(52, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 89, Short.MAX_VALUE)
-                .addComponent(Registrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel6)
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(nombreequipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(mundiales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Regresar)
-                    .addComponent(Registrarse))
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\panini.jpg")); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, 0, 680, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -222,6 +190,7 @@ public class RegistroEquipos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField mundiales;
     private javax.swing.JTextField nombreequipo;

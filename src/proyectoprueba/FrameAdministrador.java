@@ -21,6 +21,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
      */
     public FrameAdministrador() {
         initComponents();
+        setTitle("ADMINISTRADOR");
     }
 
     /**
@@ -32,6 +33,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -54,17 +56,27 @@ public class FrameAdministrador extends javax.swing.JFrame {
         archestampas = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         Salir = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+
+        jLabel7.setText("jLabel7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CRUD de Usuarios");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 55, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CRUD de Jugadores");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 126, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Carga Masiva");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 317, -1, -1));
 
         crear.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         crear.setText("Crear");
@@ -73,6 +85,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 crearActionPerformed(evt);
             }
         });
+        getContentPane().add(crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 85, -1, -1));
 
         editar.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         editar.setText("Editar");
@@ -81,6 +94,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 editarActionPerformed(evt);
             }
         });
+        getContentPane().add(editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 85, -1, -1));
 
         eliminar.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         eliminar.setText("Eliminar");
@@ -89,6 +103,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 eliminarActionPerformed(evt);
             }
         });
+        getContentPane().add(eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 85, -1, -1));
 
         crearj.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         crearj.setText("Crear");
@@ -97,6 +112,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 crearjActionPerformed(evt);
             }
         });
+        getContentPane().add(crearj, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 151, -1, -1));
 
         editarj.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         editarj.setText("Editar");
@@ -105,6 +121,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 editarjActionPerformed(evt);
             }
         });
+        getContentPane().add(editarj, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 151, -1, -1));
 
         eliminarj.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         eliminarj.setText("Eliminar");
@@ -113,12 +130,17 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 eliminarjActionPerformed(evt);
             }
         });
+        getContentPane().add(eliminarj, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 151, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("CRUD de Equipos");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 192, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CRUD de Estampas");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 251, -1, -1));
 
         crearequi.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         crearequi.setText("Crear");
@@ -127,6 +149,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 crearequiActionPerformed(evt);
             }
         });
+        getContentPane().add(crearequi, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 222, -1, -1));
 
         editarequi.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         editarequi.setText("Editar");
@@ -135,6 +158,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 editarequiActionPerformed(evt);
             }
         });
+        getContentPane().add(editarequi, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 222, -1, -1));
 
         eliminarequi.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         eliminarequi.setText("Eliminar");
@@ -143,6 +167,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 eliminarequiActionPerformed(evt);
             }
         });
+        getContentPane().add(eliminarequi, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 222, -1, -1));
 
         Crearestampas.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         Crearestampas.setText("Crear");
@@ -151,6 +176,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 CrearestampasActionPerformed(evt);
             }
         });
+        getContentPane().add(Crearestampas, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 276, -1, -1));
 
         EditarEstampas.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         EditarEstampas.setText("Editar");
@@ -159,9 +185,16 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 EditarEstampasActionPerformed(evt);
             }
         });
+        getContentPane().add(EditarEstampas, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 276, -1, -1));
 
         EliminarEstampas.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         EliminarEstampas.setText("Eliminar");
+        EliminarEstampas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarEstampasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(EliminarEstampas, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 276, -1, -1));
 
         archequ.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         archequ.setText("Archivo de equipos");
@@ -170,6 +203,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 archequActionPerformed(evt);
             }
         });
+        getContentPane().add(archequ, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 346, -1, -1));
 
         archjugadores.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         archjugadores.setText("Archivo de jugadores");
@@ -178,6 +212,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 archjugadoresActionPerformed(evt);
             }
         });
+        getContentPane().add(archjugadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 346, -1, -1));
 
         archestampas.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         archestampas.setText("Archivo de estampas");
@@ -186,10 +221,13 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 archestampasActionPerformed(evt);
             }
         });
+        getContentPane().add(archestampas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("ADMINISTRADOR");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 20, 151, -1));
 
         Salir.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         Salir.setText("LogOut");
@@ -198,105 +236,12 @@ public class FrameAdministrador extends javax.swing.JFrame {
                 SalirActionPerformed(evt);
             }
         });
+        getContentPane().add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 21, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                        .addComponent(Salir)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(archequ)
-                                .addGap(18, 18, 18)
-                                .addComponent(archjugadores))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(72, 72, 72)
-                                .addComponent(archestampas))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Crearestampas)
-                                .addGap(18, 18, 18)
-                                .addComponent(EditarEstampas)
-                                .addGap(18, 18, 18)
-                                .addComponent(EliminarEstampas))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(crearequi)
-                                .addGap(18, 18, 18)
-                                .addComponent(editarequi)
-                                .addGap(18, 18, 18)
-                                .addComponent(eliminarequi))
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(crear)
-                                .addGap(18, 18, 18)
-                                .addComponent(editar)
-                                .addGap(18, 18, 18)
-                                .addComponent(eliminar))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(crearj)
-                                .addGap(18, 18, 18)
-                                .addComponent(editarj)
-                                .addGap(18, 18, 18)
-                                .addComponent(eliminarj))
-                            .addComponent(jLabel1))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(Salir))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(crear)
-                    .addComponent(editar)
-                    .addComponent(eliminar))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(crearj)
-                    .addComponent(editarj)
-                    .addComponent(eliminarj))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(crearequi)
-                    .addComponent(editarequi)
-                    .addComponent(eliminarequi))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EditarEstampas)
-                    .addComponent(EliminarEstampas)
-                    .addComponent(Crearestampas))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(archequ)
-                    .addComponent(archjugadores))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(archestampas)
-                .addGap(37, 37, 37))
-        );
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\azulpanini.jpg")); // NOI18N
+        jLabel8.setText("jLabel8");
+        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-360, -10, 790, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -311,13 +256,25 @@ public class FrameAdministrador extends javax.swing.JFrame {
 
     private void archestampasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archestampasActionPerformed
         // TODO add your handling code here:
+        ArchivoEstampas archivoes = new ArchivoEstampas();
+        try {
+            archivoes.mostrar();
+        } catch (IOException ex) {
+            Logger.getLogger(FrameAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        RegistroEstampas.listitaestampas.mostrar();
+        JOptionPane.showMessageDialog(null, "SE HA AGREGADO UNA LISTA DE ESTAMPAS", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
+                                                 
     }//GEN-LAST:event_archestampasActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
-        Login obj = new Login();
+//        Login obj = new Login();
+//        obj.setVisible(true);
+//        dispose();
+        VerEstampas obj = new VerEstampas();
         obj.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_SalirActionPerformed
 
     private void crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearActionPerformed
@@ -414,6 +371,13 @@ public class FrameAdministrador extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_EditarEstampasActionPerformed
 
+    private void EliminarEstampasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarEstampasActionPerformed
+        // TODO add your handling code here:
+        EliminarEstampas obj=new EliminarEstampas();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_EliminarEstampasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -472,5 +436,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }

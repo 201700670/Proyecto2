@@ -5,7 +5,10 @@
  */
 package proyectoprueba;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -13,27 +16,34 @@ import javax.swing.JOptionPane;
  */
 public class ListaEstampas {
 
+    public static ListaSEstampas listitasimpleestampas = new ListaSEstampas();
     public static String nj, ne, rutas;
     public static int raros;
     NodoEstampas inicio, fin;
     int contador;
-    public ListaEstampas() {
-        inicio =null;
-        fin = null;
 
+    public ListaEstampas() {
+        inicio = null;
+        fin = null;
+        contador = 0;
     }
 
     public boolean vacia() {
         return inicio == null;
     }
 
-    public void ingreso(String nombj, String nombe,int raro,String ruta) {
+    public void ingreso(String nombj, String nombe, int raro, String ruta) {
         NodoEstampas nuevo = new NodoEstampas();
-        nuevo.nombrejugador=nombj;
-        nuevo.nombrequipo=nombe;
-        nuevo.rareza=raro;
-        nuevo.rutaimagen=ruta;
-        if (inicio==null) {
+        nuevo.nombrejugador = nombj;
+        nuevo.nombrequipo = nombe;
+        nuevo.rareza = raro;
+        nuevo.rutaimagen = ruta;
+        listitasimpleestampas.agregaralinicio(nombj, nombe, raro, ruta);
+        System.out.println("esto es una lista simple");
+        listitasimpleestampas.mostrarLista();
+        listitasimpleestampas.tamano();
+        listitasimpleestampas.aleatorio();
+        if (inicio == null) {
             inicio = nuevo;
             inicio.siguiente = inicio;
             nuevo.anterior = fin;
@@ -45,26 +55,32 @@ public class ListaEstampas {
             fin = nuevo;
             inicio.anterior = fin;
         }
+        contador++;
+        System.out.println(contador + "contador");
     }
 
     public void mostrar() {
-            NodoEstampas aux= new NodoEstampas();
-            String datos = "<=>";
-            aux = inicio;
-            do{
-                datos=datos+"["+aux.nombrejugador+ "," + aux.nombrequipo + "," + aux.rareza + "," + aux.rutaimagen + "]<=>";
-                
-                aux = aux.siguiente;
-            }while (aux != inicio);
-            System.out.println(datos);
+        NodoEstampas aux = new NodoEstampas();
+        String datos = "<=>";
+        aux = inicio;
+        do {
+            try{
+            datos = datos + "[" + aux.nombrejugador + "," + aux.nombrequipo + "," + aux.rareza + "," + aux.rutaimagen + "]<=>";
+            aux = aux.siguiente;
+            } catch (Exception e) {
+                    }
+        } while (aux != inicio);
+        System.out.println(datos);
+
     }
 
     public String buscar(String nombj, String nombe, int raro, String ruta) {
         NodoEstampas aux = inicio;
         String dato = "";
         do {
+            try{
             if (aux.nombrejugador.equals(nombj)) {
-                JOptionPane.showMessageDialog(null, "EL EQUIPO EXISTE", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "LA ESTAMPA EXISTE", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
                 nombj = aux.nombrejugador;
                 nombe = aux.nombrequipo;
                 raro = aux.rareza;
@@ -75,16 +91,20 @@ public class ListaEstampas {
                 raros = aux.rareza;
                 rutas = aux.rutaimagen;
 
+            }else if(!aux.nombrejugador.equals(nombj)){
+                JOptionPane.showMessageDialog(null, "LA ESTAMPA NO EXISTE", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
             }
             aux = aux.siguiente;
-        }while (aux != inicio);
+            } catch (Exception e) {
+                    }
+        } while (aux != inicio);
         return dato;
     }
 
     public String modificar(String nombj, String nombe, int raro, String ruta) {
         NodoEstampas aux = inicio;
         String dato = "";
-         do{
+        do {
             if (aux.nombrejugador.equals(nj)) {
                 aux.nombrejugador = nombj;
                 aux.nombrequipo = nombe;
@@ -94,11 +114,11 @@ public class ListaEstampas {
                 System.out.println(dato);
             }
             aux = aux.siguiente;
-        }while (aux != inicio);
+        } while (aux != inicio);
         return dato;
     }
 
-    public void eliminar(String nombj) {
+    public void eliminar(String nombj, String nombe, int raro, String ruta) {
         NodoEstampas actual = inicio;
         NodoEstampas anterior = fin;
         do {
@@ -107,17 +127,60 @@ public class ListaEstampas {
                     inicio = inicio.siguiente;
                     fin.siguiente = inicio;
                     inicio.anterior = fin;
-                } else if(actual==fin){
-                    fin=anterior;
-                    inicio.anterior=fin;
-                    fin.siguiente=inicio;
-                }else{
-                    anterior.siguiente=actual.siguiente;
-                    actual.siguiente.anterior=anterior;
+                    
+                } else if (actual == fin) {
+                    fin = anterior;
+                    try {
+                        inicio.anterior = fin;
+                        fin.siguiente = inicio;
+                    } catch (Exception e) {
+                    }
+                } else if (actual != inicio) {
+                    anterior.siguiente = actual.siguiente;
+                    actual.siguiente.anterior = anterior;
                 }
+                if(contador==1){
+                inicio.siguiente=null;
+                inicio=inicio.siguiente;
+            }
             }
             anterior = actual;
+            
+            System.out.println(contador + "contador");
+            
             actual = actual.siguiente;
-        }while (actual != inicio);
+        } while (actual != inicio);
+        
+    contador--;
+    }
+
+    public String labelsiguiente(int estampastam, JLabel estampa, JTextArea imprimir) {
+        ImageIcon imagen;
+        JLabel tomar;
+        String datos = "";
+        String area="";
+        NodoEstampas aux = inicio;
+        int tamanodato = 0;
+        do {
+            tamanodato++;
+            
+            if (tamanodato == estampastam) {
+                datos = aux.rutaimagen;
+                area="Nombre de jugador: "+aux.nombrejugador+"\n"+ "Nombre del equipo: "+ aux.nombrequipo+"\n";
+                imprimir.append(area);
+                System.out.println(datos);
+                estampa.setIcon(new ImageIcon(datos));
+            }
+            aux = aux.siguiente;
+        } while (aux != inicio);
+        System.out.println(tamanodato+"TAMAÑOINTERNO");
+        if (estampastam >= contador) {
+            JOptionPane.showMessageDialog(null, "YA NO HAY MÁS JUGADORES", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
+        }
+        if (estampastam ==0) {
+            tamanodato=1;
+            JOptionPane.showMessageDialog(null, "YA NO HAY MÁS JUGADORES", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
+        }
+        return datos;
     }
 }

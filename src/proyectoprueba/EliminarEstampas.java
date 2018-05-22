@@ -9,14 +9,13 @@ package proyectoprueba;
  *
  * @author Andrea Palomo
  */
-public class EditaEstampas extends javax.swing.JFrame {
+public class EliminarEstampas extends javax.swing.JFrame {
 
     /**
-     * Creates new form EditaEstampas
+     * Creates new form EliminarEstampas
      */
-    public EditaEstampas() {
+    public EliminarEstampas() {
         initComponents();
-        setTitle("EDITAR ESTAMPAS");
     }
 
     /**
@@ -28,19 +27,24 @@ public class EditaEstampas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        rareza = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         nombrej = new javax.swing.JTextField();
         rutaimage = new javax.swing.JTextField();
         equiponom = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        Editar = new javax.swing.JButton();
+        Eliminar = new javax.swing.JButton();
         Regresar = new javax.swing.JButton();
         Buscar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        equiponom1 = new javax.swing.JTextField();
+        rareza = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\panini.jpg")); // NOI18N
+        jLabel5.setText("jLabel5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,10 +67,6 @@ public class EditaEstampas extends javax.swing.JFrame {
         jLabel4.setToolTipText("");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 221, -1, -1));
 
-        rareza.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        rareza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1" }));
-        getContentPane().add(rareza, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 181, 190, -1));
-
         jLabel3.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Rareza");
@@ -84,10 +84,12 @@ public class EditaEstampas extends javax.swing.JFrame {
 
         rutaimage.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         rutaimage.setToolTipText("");
+        rutaimage.setEnabled(false);
         getContentPane().add(rutaimage, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 220, 190, -1));
 
         equiponom.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         equiponom.setToolTipText("");
+        equiponom.setEnabled(false);
         equiponom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 equiponomActionPerformed(evt);
@@ -98,18 +100,18 @@ public class EditaEstampas extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("edición de estampas");
+        jLabel6.setText("Eliminar estampas");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 25, 226, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 226, -1));
 
-        Editar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        Editar.setText("Editar");
-        Editar.addActionListener(new java.awt.event.ActionListener() {
+        Eliminar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        Eliminar.setText("Eliminar");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EditarActionPerformed(evt);
+                EliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(Editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 279, 131, -1));
+        getContentPane().add(Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 279, 131, -1));
 
         Regresar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Regresar.setText("Regresar");
@@ -129,9 +131,23 @@ public class EditaEstampas extends javax.swing.JFrame {
         });
         getContentPane().add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 89, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\panini.jpg")); // NOI18N
-        jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, -20, 700, 360));
+        equiponom1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        equiponom1.setToolTipText("");
+        equiponom1.setEnabled(false);
+        equiponom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equiponom1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(equiponom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 136, 190, -1));
+
+        rareza.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        rareza.setEnabled(false);
+        getContentPane().add(rareza, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 190, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\panini.jpg")); // NOI18N
+        jLabel7.setText("jLabel5");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, 0, 710, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -144,22 +160,22 @@ public class EditaEstampas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_equiponomActionPerformed
 
-    private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
         // TODO add your handling code here:
         String nombredelj, nombredele, raro,rutadeimagen;
         nombredelj= nombrej.getText();
         nombredele= equiponom.getText();
         rutadeimagen = rutaimage.getText();
         int rarocombo = 0;
-        rarocombo =Integer.parseInt(rareza.getSelectedItem().toString());
+        rarocombo =Integer.parseInt(rareza.getText());
 
-        RegistroEstampas.listitaestampas.modificar(nombredelj, nombredele, rarocombo, rutadeimagen);
+        RegistroEstampas.listitaestampas.eliminar(nombredelj, nombredele, rarocombo, rutadeimagen);
         RegistroEstampas.listitaestampas.mostrar();
         nombrej.setText(null);
         equiponom.setText(null);
         rutaimage.setText(null);
-
-    }//GEN-LAST:event_EditarActionPerformed
+        rareza.getText();
+    }//GEN-LAST:event_EliminarActionPerformed
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
         // TODO add your handling code here:}
@@ -175,14 +191,19 @@ public class EditaEstampas extends javax.swing.JFrame {
         nombredele= equiponom.getText();
         rutadeimagen = rutaimage.getText();
         int rarocombo = 0;
-        rarocombo =Integer.parseInt(rareza.getSelectedItem().toString());
+        raro =rareza.getText();
 
         RegistroEstampas.listitaestampas.buscar(nombredelj, nombredele, rarocombo, rutadeimagen);
         RegistroEstampas.listitaestampas.mostrar();
         nombrej.setText(ListaEstampas.nj);
         equiponom.setText(ListaEstampas.ne);
         rutaimage.setText(ListaEstampas.rutas);
+        rareza.setText(String.valueOf(ListaEstampas.raros));
     }//GEN-LAST:event_BuscarActionPerformed
+
+    private void equiponom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equiponom1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_equiponom1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,37 +222,39 @@ public class EditaEstampas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EditaEstampas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EliminarEstampas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EditaEstampas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EliminarEstampas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EditaEstampas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EliminarEstampas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EditaEstampas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EliminarEstampas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EditaEstampas().setVisible(true);
+                new EliminarEstampas().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Buscar;
-    private javax.swing.JButton Editar;
+    private javax.swing.JButton Eliminar;
     private javax.swing.JButton Regresar;
     private javax.swing.JTextField equiponom;
+    private javax.swing.JTextField equiponom1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField nombrej;
-    private javax.swing.JComboBox<String> rareza;
+    private javax.swing.JTextField rareza;
     private javax.swing.JTextField rutaimage;
     // End of variables declaration//GEN-END:variables
 }

@@ -11,13 +11,17 @@ package proyectoprueba;
  */
 public class ProyectoPrueba {
 
+    public static String usuarioactual;
+
     public static void main(String[] args) {
         // TODO code application logic here
-        RegistroU.listitausuario.insertarinicio("3609787380108", "vgdep@hotmail.com", "vgdep", "Andrea", "201700670");
+
+        RegistroU.listitausuario.insertarinicio("3609787380108", "vgdep@hotmail.com", "vgdep", "Administrador", "201700670", RegistroEquipos.listitaequipos);
 //        Login obj= new Login();
 //        obj.setVisible(true);
         FrameAdministrador obj = new FrameAdministrador();
         obj.setVisible(true);
+
     }
 
 }

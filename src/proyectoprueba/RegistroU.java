@@ -25,6 +25,7 @@ public class RegistroU extends javax.swing.JFrame {
      */
     public RegistroU() {
         initComponents();
+        setTitle("REGISTRO DE USUARIOS");
     }
 
     /**
@@ -49,28 +50,40 @@ public class RegistroU extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CUI:");
         jLabel1.setToolTipText("");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 94, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre:");
         jLabel2.setToolTipText("");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 137, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Correo electrónico:");
         jLabel3.setToolTipText("");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 178, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nombre usuario:");
         jLabel4.setToolTipText("");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 217, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Contraseña:");
         jLabel5.setToolTipText("");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 258, -1, -1));
 
         cui.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         cui.setToolTipText("");
@@ -79,9 +92,11 @@ public class RegistroU extends javax.swing.JFrame {
                 cuiActionPerformed(evt);
             }
         });
+        getContentPane().add(cui, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 93, 190, -1));
 
         correo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         correo.setToolTipText("");
+        getContentPane().add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 175, 190, -1));
 
         nombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         nombre.setToolTipText("");
@@ -90,17 +105,22 @@ public class RegistroU extends javax.swing.JFrame {
                 nombreActionPerformed(evt);
             }
         });
+        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 134, 190, -1));
 
         usuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         usuario.setToolTipText("");
+        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 216, 190, -1));
 
         contrasena.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         contrasena.setToolTipText("");
+        getContentPane().add(contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 257, 190, -1));
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("REGISTRO DE USUARIO");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 25, 226, -1));
 
         jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jButton1.setText("Registrarse");
@@ -109,6 +129,7 @@ public class RegistroU extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 309, 131, -1));
 
         jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jButton3.setText("Regresar");
@@ -117,71 +138,11 @@ public class RegistroU extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 309, 155, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(24, 24, 24))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4))
-                                .addGap(32, 32, 32)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cui)
-                                    .addComponent(correo)
-                                    .addComponent(nombre)
-                                    .addComponent(usuario)
-                                    .addComponent(contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))))))
-                .addContainerGap(75, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel6)
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(cui, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addGap(58, 58, 58))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\panini.jpg")); // NOI18N
+        jLabel7.setText("jLabel5");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, 0, 660, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -202,7 +163,7 @@ public class RegistroU extends javax.swing.JFrame {
         nomusuario = usuario.getText();
         contra = contrasena.getText();
         
-        listitausuario.insertarinicio(id, nom, electronico, nomusuario, contra);
+        listitausuario.insertarinicio(id, nom, electronico, nomusuario, contra,RegistroEquipos.listitaequipos);
         listitausuario.mostrar();
         
         cui.setText(null);
@@ -272,6 +233,7 @@ public class RegistroU extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables

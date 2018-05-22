@@ -24,12 +24,12 @@ public class ListaUsuarios {
         return inicio==null;
     }
     // método agregar al inicio
-    public void insertarinicio(String cui,String nombre,String correo, String usuario, String contrasena){
+    public void insertarinicio(String cui,String nombre,String correo, String usuario, String contrasena,ListaEquipos listo){
         if(!vacia()){
-            inicio=new NodoUsuario(cui,nombre, correo,usuario,contrasena, inicio, null);
+            inicio=new NodoUsuario(cui,nombre, correo,usuario,contrasena,listo, inicio, null);
             inicio.siguiente.anterior=inicio;
         }else{
-            inicio=fin=new NodoUsuario(cui,nombre, correo,usuario,contrasena);
+            inicio=fin=new NodoUsuario(cui,nombre, correo,usuario,contrasena,listo);
         }
     }
     public void mostrar(){
@@ -51,6 +51,7 @@ public class ListaUsuarios {
             if(aux.obusu.equals(usuario) && aux.obcontra.equals(contrasena)){
                 comprobando=true;
                 dato="["+usuario+","+contrasena+"]";
+                ProyectoPrueba.usuarioactual=usuario;
                 JOptionPane.showMessageDialog(null, "BIENVENIDO", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
                 System.out.println(dato);
             }

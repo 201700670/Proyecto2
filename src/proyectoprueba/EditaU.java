@@ -19,6 +19,7 @@ public class EditaU extends javax.swing.JFrame {
      */
     public EditaU() {
         initComponents();
+        setTitle("EDITAR USUARIOS");
     }
 
     /**
@@ -45,23 +46,31 @@ public class EditaU extends javax.swing.JFrame {
         correo = new javax.swing.JTextField();
         nombre = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         usuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         usuario.setToolTipText("");
+        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 220, 190, -1));
 
         contrasena.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         contrasena.setToolTipText("");
+        getContentPane().add(contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 263, 190, -1));
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Editar USUARIOs");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 24, 226, -1));
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CUI:");
         jLabel1.setToolTipText("");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 94, -1, -1));
 
         Editar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Editar.setText("Editar");
@@ -70,10 +79,13 @@ public class EditaU extends javax.swing.JFrame {
                 EditarActionPerformed(evt);
             }
         });
+        getContentPane().add(Editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 336, 131, -1));
 
         jLabel2.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre:");
         jLabel2.setToolTipText("");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 137, -1, -1));
 
         Regresar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Regresar.setText("Cancelar");
@@ -82,10 +94,13 @@ public class EditaU extends javax.swing.JFrame {
                 RegresarActionPerformed(evt);
             }
         });
+        getContentPane().add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 336, 155, -1));
 
         jLabel3.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Correo electrónico:");
         jLabel3.setToolTipText("");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 178, -1, -1));
 
         buscar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         buscar.setText("Buscar");
@@ -94,14 +109,19 @@ public class EditaU extends javax.swing.JFrame {
                 buscarActionPerformed(evt);
             }
         });
+        getContentPane().add(buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 216, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Nombre usuario:");
         jLabel4.setToolTipText("");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 221, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Contraseña:");
         jLabel5.setToolTipText("");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 264, -1, -1));
 
         cui.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         cui.setToolTipText("");
@@ -110,9 +130,11 @@ public class EditaU extends javax.swing.JFrame {
                 cuiActionPerformed(evt);
             }
         });
+        getContentPane().add(cui, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 93, 190, -1));
 
         correo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         correo.setToolTipText("");
+        getContentPane().add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 175, 190, -1));
 
         nombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         nombre.setToolTipText("");
@@ -121,79 +143,15 @@ public class EditaU extends javax.swing.JFrame {
                 nombreActionPerformed(evt);
             }
         });
+        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 134, 190, -1));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Después de realiza la búsqueda realice la edición de campos y presione editar.");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 304, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4))
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cui)
-                            .addComponent(correo)
-                            .addComponent(nombre)
-                            .addComponent(usuario)
-                            .addComponent(contrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(buscar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(153, 153, 153)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jLabel8)))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel6)
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(cui, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buscar))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Regresar)
-                    .addComponent(Editar))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\panini.jpg")); // NOI18N
+        jLabel7.setText("jLabel5");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 0, 660, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -296,6 +254,7 @@ public class EditaU extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField usuario;

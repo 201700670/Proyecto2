@@ -16,6 +16,7 @@ public class RegistroEstampas extends javax.swing.JFrame {
      */
     public RegistroEstampas() {
         initComponents();
+        setTitle("REGISTRO DE ESTAMPAS");
     }
 
     /**
@@ -38,12 +39,16 @@ public class RegistroEstampas extends javax.swing.JFrame {
         rareza = new javax.swing.JComboBox<>();
         Regresar1 = new javax.swing.JButton();
         Editar = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Rareza");
         jLabel3.setToolTipText("");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 178, -1, -1));
 
         nombrej.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         nombrej.setToolTipText("");
@@ -52,9 +57,11 @@ public class RegistroEstampas extends javax.swing.JFrame {
                 nombrejActionPerformed(evt);
             }
         });
+        getContentPane().add(nombrej, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 93, 190, -1));
 
         rutaimage.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         rutaimage.setToolTipText("");
+        getContentPane().add(rutaimage, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 218, 190, -1));
 
         equiponom.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         equiponom.setToolTipText("");
@@ -63,25 +70,36 @@ public class RegistroEstampas extends javax.swing.JFrame {
                 equiponomActionPerformed(evt);
             }
         });
+        getContentPane().add(equiponom, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 134, 190, -1));
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("REGISTRO DE ESTAMPAS");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 25, 226, -1));
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Nombre de jugador:");
         jLabel1.setToolTipText("");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 94, 168, -1));
 
         jLabel2.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre de equipo:");
         jLabel2.setToolTipText("");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 137, 154, -1));
 
         jLabel4.setFont(new java.awt.Font("Kristen ITC", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Ruta de imagen:");
         jLabel4.setToolTipText("");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 219, -1, -1));
 
+        rareza.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         rareza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1" }));
+        getContentPane().add(rareza, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 179, 190, -1));
 
         Regresar1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Regresar1.setText("Regresar");
@@ -90,6 +108,7 @@ public class RegistroEstampas extends javax.swing.JFrame {
                 Regresar1ActionPerformed(evt);
             }
         });
+        getContentPane().add(Regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 269, 155, -1));
 
         Editar.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Editar.setText("Registrar");
@@ -98,65 +117,11 @@ public class RegistroEstampas extends javax.swing.JFrame {
                 EditarActionPerformed(evt);
             }
         });
+        getContentPane().add(Editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 269, 131, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(nombrej)
-                                    .addComponent(rutaimage)
-                                    .addComponent(equiponom, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                                    .addComponent(rareza, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Regresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel6)
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(nombrej, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(equiponom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(rareza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(rutaimage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Editar)
-                    .addComponent(Regresar1))
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\panini.jpg")); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, -10, 610, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -237,6 +202,7 @@ public class RegistroEstampas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField nombrej;
     private javax.swing.JComboBox<String> rareza;

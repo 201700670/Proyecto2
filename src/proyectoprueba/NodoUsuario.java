@@ -12,16 +12,18 @@ package proyectoprueba;
 public class NodoUsuario  {
     String obcui,obnom, obcorreo, obusu, obcontra;
     NodoUsuario siguiente, anterior;
-    public NodoUsuario(String cui,String nombre,String correo, String usuario, String contrasena) {
-        this(cui,nombre,correo, usuario, contrasena,null,null);
+    ListaEquipos listadoequipos;
+    public NodoUsuario(String cui,String nombre,String correo, String usuario, String contrasena, ListaEquipos listado) {
+        this(cui,nombre,correo, usuario, contrasena,listado,null,null);
     }
-    public NodoUsuario(String cui,String nombre,String correo, String usuario, String contrasena, NodoUsuario s, NodoUsuario a){
+    public NodoUsuario(String cui,String nombre,String correo, String usuario, String contrasena,ListaEquipos listado ,NodoUsuario s, NodoUsuario a){
         ////NO SE SI PONERLE EL IF DE LA COMPARACIÓN DE LOS USUARIOS CON EL USUARIO ACTUAL
         obcui=cui;
         obnom=nombre;
         obcorreo=correo;
         obusu=usuario;
         obcontra=contrasena;
+        listadoequipos=listado;
         siguiente=s;
         anterior=a;
     }

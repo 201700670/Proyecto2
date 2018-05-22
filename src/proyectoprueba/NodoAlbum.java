@@ -9,12 +9,6 @@ package proyectoprueba;
  *
  * @author Andrea Palomo
  */
-public class NodoSobres {
-    ListaSEstampas listainterna;
-    String nodos;
-    NodoSobres siguiente;
-    public NodoSobres(ListaSEstampas listaaleatoria){
-        listainterna=listaaleatoria;
-        siguiente=this;
-    }
+public class NodoAlbum {
+    
 }

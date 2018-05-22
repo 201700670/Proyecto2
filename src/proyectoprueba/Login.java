@@ -21,6 +21,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        setTitle("LOGIN");
     }
 
     /**
@@ -43,20 +44,27 @@ public class Login extends javax.swing.JFrame {
         Cancelar = new javax.swing.JButton();
         imagenlog = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Usuario:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Contraseña:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
         usuario.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 186, -1));
 
         contrasena.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
         contrasena.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +72,7 @@ public class Login extends javax.swing.JFrame {
                 contrasenaActionPerformed(evt);
             }
         });
+        getContentPane().add(contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 186, -1));
 
         Login.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
         Login.setText("Login");
@@ -72,6 +81,7 @@ public class Login extends javax.swing.JFrame {
                 LoginActionPerformed(evt);
             }
         });
+        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 236, -1, -1));
 
         Registrarse.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
         Registrarse.setText("Registrarse");
@@ -80,6 +90,7 @@ public class Login extends javax.swing.JFrame {
                 RegistrarseActionPerformed(evt);
             }
         });
+        getContentPane().add(Registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 236, -1, -1));
 
         Cancelar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
         Cancelar.setText("Cancelar");
@@ -88,6 +99,7 @@ public class Login extends javax.swing.JFrame {
                 CancelarActionPerformed(evt);
             }
         });
+        getContentPane().add(Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 236, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\users.png")); // NOI18N
         jLabel3.setToolTipText("");
@@ -104,52 +116,11 @@ public class Login extends javax.swing.JFrame {
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Login)
-                        .addGap(18, 18, 18)
-                        .addComponent(Registrarse)
-                        .addGap(18, 18, 18)
-                        .addComponent(Cancelar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(contrasena)
-                            .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(imagenlog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(imagenlog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Login)
-                    .addComponent(Registrarse)
-                    .addComponent(Cancelar))
-                .addContainerGap(51, Short.MAX_VALUE))
-        );
+        getContentPane().add(imagenlog, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\azulpanini.jpg")); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 310));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -176,15 +147,15 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         usuarios12 = usuario.getText();
         pasword = contrasena.getText();
-        boolean probando;
+        boolean probando=false;
         ///////////haciendo busqueda
-        if (usuarios12.equals("Andrea") && pasword.equals("201700670")) {
+        if (usuarios12.equals("Administrador") && pasword.equals("201700670")) {
             FrameAdministrador obj = new FrameAdministrador();
             obj.setVisible(true);
             dispose();
         }
         probando = RegistroU.listitausuario.buscarlogin(usuarios12, pasword);
-        if (probando) {
+        if (!usuarios12.equals("Administrador") && !pasword.equals("201700670")) {
             //////////////Ingresa a Usuario
             Usuario obj = new Usuario();
             obj.setVisible(true);
@@ -239,6 +210,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField usuario;

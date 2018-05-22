@@ -30,7 +30,7 @@ public class ArchivoEstampas {
                 
                 //OBTIENE LOS DATOS Y LOS COLOCA EN NUESTRA LISTA 
 
-                Registrosjugadores.listitajugadores.insertarinicio(datos[0], datos[1], datos[2],datos[3],datos[4]);
+                RegistroEstampas.listitaestampas.ingreso(datos[0], datos[1], Integer.parseInt(datos[2]), datos[3]);
 
             }
 
