@@ -269,11 +269,11 @@ public class FrameAdministrador extends javax.swing.JFrame {
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
-//        Login obj = new Login();
-//        obj.setVisible(true);
-//        dispose();
-        VerEstampas obj = new VerEstampas();
+        Login obj = new Login();
         obj.setVisible(true);
+        dispose();
+//        VerEstampas obj = new VerEstampas();
+//        obj.setVisible(true);
         
     }//GEN-LAST:event_SalirActionPerformed
 
@@ -373,6 +373,7 @@ public class FrameAdministrador extends javax.swing.JFrame {
 
     private void EliminarEstampasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarEstampasActionPerformed
         // TODO add your handling code here:
+//        EliminarEstampas obj=new EliminarEstampas();
         EliminarEstampas obj=new EliminarEstampas();
         obj.setVisible(true);
         dispose();

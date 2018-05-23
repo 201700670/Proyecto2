@@ -168,12 +168,12 @@ public class ListaEstampas {
                 datos = aux.rutaimagen;
                 area="Nombre de jugador: "+aux.nombrejugador+"\n"+ "Nombre del equipo: "+ aux.nombrequipo+"\n";
                 imprimir.append(area);
-                System.out.println(datos);
+//                System.out.println(datos);
                 estampa.setIcon(new ImageIcon(datos));
             }
             aux = aux.siguiente;
         } while (aux != inicio);
-        System.out.println(tamanodato+"TAMAÑOINTERNO");
+//        System.out.println(tamanodato+"TAMAÑOINTERNO");
         if (estampastam >= contador) {
             JOptionPane.showMessageDialog(null, "YA NO HAY MÁS JUGADORES", "INFORMACION", JOptionPane.INFORMATION_MESSAGE);
         }

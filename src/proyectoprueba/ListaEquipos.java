@@ -161,19 +161,18 @@ public class ListaEquipos {
         String dato = "";
         while (aux != null) {
             if (aux.codigo.equals(obcodigo)) {
-                if (aux == inicio) {
+                if(aux==inicio){
                     try {
-                    inicio = inicio.siguiente;
-                    inicio.anterior = null;
+                    inicio=inicio.siguiente;
+                    inicio.anterior=null;
                     } catch (Exception e) {
-                        
                     }
-                } else {
-                    try {
-                    atras.siguiente = aux.siguiente;
-                    aux.siguiente.anterior = aux.anterior;
+                }
+                else{
+                     try {
+                    atras.siguiente=aux.siguiente;
+                    aux.siguiente.anterior=aux.anterior;
                     } catch (Exception e) {
-                        
                     }
                 }
 //                dato="["+aux.obcui+","+aux.obnom+","+aux.obcorreo+","+aux.obusu+","+aux.obcontra+"]";

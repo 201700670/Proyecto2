@@ -10,5 +10,14 @@ package proyectoprueba;
  * @author Andrea Palomo
  */
 public class NodoAlbum {
-    
+    String rutaimagen;
+    public NodoAlbum siguiente;
+    public NodoAlbum(String ruta){//final
+        rutaimagen=ruta;
+        this.siguiente=null;
+    }
+    public NodoAlbum(String ruta, NodoAlbum n){//inicio
+        rutaimagen=ruta;
+        siguiente=n;
+    }
 }

@@ -17,10 +17,10 @@ public class ProyectoPrueba {
         // TODO code application logic here
 
         RegistroU.listitausuario.insertarinicio("3609787380108", "vgdep@hotmail.com", "vgdep", "Administrador", "201700670", RegistroEquipos.listitaequipos);
-//        Login obj= new Login();
-//        obj.setVisible(true);
-        FrameAdministrador obj = new FrameAdministrador();
+        Login obj= new Login();
         obj.setVisible(true);
+//        FrameAdministrador obj = new FrameAdministrador();
+//        obj.setVisible(true);
 
     }
 

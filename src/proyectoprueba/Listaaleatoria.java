@@ -10,7 +10,7 @@ package proyectoprueba;
  * @author Andrea Palomo
  */
 public class Listaaleatoria {
-    ListaSobres listitanormal= new ListaSobres();
+    ListaEstampas listitanormal= new ListaEstampas();
     public void generar(){
         int valorDado = (int) Math.floor(Math.random()*7+1);
         for (int i=0; i<valorDado;i++){
@@ -20,7 +20,9 @@ public class Listaaleatoria {
 //    public Object JugadorAleatoriamente(int raro){
 //        if(raro==0){
 //            int aleatorio= (int)(int) Math.floor(Math.random()*7+1);
+//        }else if(raro==1){
+//            int aleatorio=
 //        }
-//        return aleatorio;
+//       
 //    }
 }

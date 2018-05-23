@@ -15,7 +15,7 @@ import javax.swing.JLabel;
  * @author Andrea Palomo
  */
 public class VerEstampas extends javax.swing.JFrame {
-
+    public static ListaAlbum listitalbum= new ListaAlbum();
     public static int tam = 0;
 
     /**
@@ -39,18 +39,27 @@ public class VerEstampas extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         estampas = new javax.swing.JLabel();
         Siguiente = new javax.swing.JButton();
         Atras = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Informacion = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\azulpanini.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.setVerifyInputWhenFocusTarget(false);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\azulpanini.jpg")); // NOI18N
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel2.setVerifyInputWhenFocusTarget(false);
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -103,10 +112,19 @@ public class VerEstampas extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\azulpanini.jpg")); // NOI18N
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel2.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-340, 0, 800, 360));
+        jButton2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 12)); // NOI18N
+        jButton2.setText("Regresar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andrea Palomo\\Documents\\NetBeansProjects\\ProyectoPrueba\\azulpanini.jpg")); // NOI18N
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel3.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-340, 0, 800, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,7 +133,6 @@ public class VerEstampas extends javax.swing.JFrame {
         // TODO add your handling code here:
         Informacion.setText(null);
         tam++;
-        System.out.println(tam);
 //        ListaEstampas.listitasimpleestampas.varioslabels(tam, estampas);
         RegistroEstampas.listitaestampas.labelsiguiente(tam, estampas, Informacion);
 
@@ -126,13 +143,18 @@ public class VerEstampas extends javax.swing.JFrame {
         // TODO add your handling code here:
         Informacion.setText(null);
         tam--;
-        System.out.println();
         RegistroEstampas.listitaestampas.labelsiguiente(tam, estampas, Informacion);
     }//GEN-LAST:event_AtrasActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        System.out.println(estampas.getIcon());
+        String ruta=estampas.getText();
+        estampas.getIcon();
+        ruta=estampas.getIcon().toString();
+        System.out.println(ruta);
+        listitalbum.agregaralinicio(ruta);
+        listitalbum.mostrarLista();
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void estampasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_estampasMouseClicked
@@ -140,6 +162,13 @@ public class VerEstampas extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_estampasMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Usuario obj= new Usuario();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,9 +210,12 @@ public class VerEstampas extends javax.swing.JFrame {
     private javax.swing.JTextArea Informacion;
     private javax.swing.JButton Siguiente;
     private javax.swing.JLabel estampas;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -85,6 +85,11 @@ public class Usuario extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
         jButton6.setText("Ver Estampas");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(262, 147, 143, -1));
 
         jButton7.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -117,6 +122,8 @@ public class Usuario extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        probandoalbum obj=new probandoalbum();
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -132,6 +139,13 @@ public class Usuario extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        VerEstampas obj = new VerEstampas();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments

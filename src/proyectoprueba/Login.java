@@ -160,7 +160,8 @@ public class Login extends javax.swing.JFrame {
             Usuario obj = new Usuario();
             obj.setVisible(true);
             dispose();
-        } else {
+            
+        } else if (!usuarios12.equals("Administrador") || !pasword.equals("201700670")){
             JOptionPane.showMessageDialog(null, "EL USUARIO NO EXISTE O EL USUARIO Y/O CONTRASEÑA SON INCORRECTAS, PONERSE EN CONTACTO\n"
                     + "CON EL ADMINISTRADOR PARA SOLICITAR UN REGISTRO", "ERROR", JOptionPane.WARNING_MESSAGE);
         }
